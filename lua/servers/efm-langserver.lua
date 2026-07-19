@@ -17,6 +17,7 @@ return function(capabilities)
   local hadolint = require("efmls-configs.linters.hadolint")
   local cpplint = require("efmls-configs.linters.cpplint")
   local clangformat = require("efmls-configs.formatters.clang_format")
+  local djlint_fmt = require("efmls-configs.formatters.djlint")
 
   -- =========================================================================
   -- 2. Configure EFM Language Server
@@ -69,7 +70,7 @@ return function(capabilities)
         docker = { hadolint, prettier_d },
         go = { gofumpt, go_revive },
         html = { prettier_d },
-        htmldjango = { prettier_d },
+        htmldjango = { djlint_fmt },
         javascript = { eslint_d, prettier_d },
         javascriptreact = { eslint_d, prettier_d },
         json = { eslint_d, fixjson },
