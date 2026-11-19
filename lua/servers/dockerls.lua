@@ -5,7 +5,7 @@
 --   > github: https://github.com/rcjsuen/dockerfile-language-server-nodejs
 -- ================================================================================================
 
---- @param capabilities table LSP client capabilities (from nvim-cmp via cmp_nvim_lsp)
+--- @param capabilities table LSP client capabilities (from blink.cmp)
 --- @return nil
 return function(capabilities)
     vim.lsp.config("dockerls", {

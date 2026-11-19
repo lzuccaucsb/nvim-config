@@ -6,8 +6,8 @@
 -- ================================================================================================
 
 -- Capabilities describe what this editor supports (completion, snippets, signature help, ...).
--- cmp_nvim_lsp augments the defaults so servers know nvim-cmp is driving completion.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- blink.cmp augments the defaults so servers know blink.cmp is driving completion.
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- Language Server Protocol (LSP) -- each call registers one server's config (see lua/servers/*).
 require("servers.lua_ls")(capabilities)

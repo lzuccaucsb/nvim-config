@@ -6,7 +6,7 @@
 --   > github: https://github.com/hrsh7th/vscode-langservers-extracted
 -- ================================================================================================
 
---- @param capabilities table LSP client capabilities (from nvim-cmp via cmp_nvim_lsp)
+--- @param capabilities table LSP client capabilities (from blink.cmp)
 --- @return nil
 return function(capabilities)
     vim.lsp.config("html", {

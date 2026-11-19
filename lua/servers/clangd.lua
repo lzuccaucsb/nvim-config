@@ -5,14 +5,14 @@
 --   > website: https://clangd.llvm.org/
 -- ================================================================================================
 
---- @param capabilities table LSP client capabilities (from nvim-cmp via cmp_nvim_lsp)
+--- @param capabilities table LSP client capabilities (from blink.cmp)
 --- @return nil
 return function(capabilities)
     vim.lsp.config("clangd", {
         capabilities = capabilities,
         cmd = {
             "clangd",
-            -- utf-16 offsets avoid a known encoding mismatch warning with nvim-cmp
+            -- utf-16 offsets avoid a known encoding mismatch warning with completion
             "--offset-encoding=utf-16",
         },
         filetypes = { "c", "cpp" },
